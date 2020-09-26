@@ -14,7 +14,7 @@ class MainViePagerAdampter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
         return when(position) {
             0 -> "이름"
             1 -> "나이"
-            2 -> "거주지"
+            else -> "거주지"
 
         }
 
