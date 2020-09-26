@@ -2,8 +2,11 @@ package com.zzazzu.fragmentviewpager_200926
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
+
+    lateinit var mAdapter : MainViePagerAdampter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +21,9 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
+
+        mAdapter = MainViePagerAdampter(supportFragmentManager)
+        mainViewPager.adapter = mAdapter
 
     }
 }
